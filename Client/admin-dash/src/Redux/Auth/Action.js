@@ -9,7 +9,7 @@ export const loadUser = () => async (dispatch) => {
   }
 
   try {
-    const res = await axios.get("http://localhost:5000/api/user");
+    const res = await axios.get("https://anand-mehta.herokuapp.com/api/user");
     dispatch({
       type: AuthActionTypes.USER_LOADED,
       payload: res.data,
@@ -45,7 +45,7 @@ export const register =
     try {
       // Response
       const res = await axios.post(
-        "http://localhost:5000/api/user/register",
+        "https://anand-mehta.herokuapp.com/api/user/register",
         body,
         config
       );
@@ -90,7 +90,7 @@ export const login =
     try {
       // Response
       const res = await axios.post(
-        "http://localhost:5000/api/user/login",
+        "https://anand-mehta.herokuapp.com/api/user/login",
         body,
         config
       );
